@@ -1,0 +1,479 @@
+erp-system/
+│
+├── 📄 README.md
+├── 📄 .gitignore
+├── 📄 package.json
+├── 📄 LICENSE
+├── 📄 docker-compose.yml
+├── 📄 docker-compose.prod.yml
+│
+├── 📁 client/
+│   ├── 📄 .env
+│   ├── 📄 .env.example
+│   ├── 📄 .gitignore
+│   ├── 📄 index.html
+│   ├── 📄 package.json
+│   ├── 📄 vite.config.js
+│   ├── 📄 tailwind.config.js
+│   ├── 📄 postcss.config.js
+│   │
+│   ├── 📁 public/
+│   │   ├── 📄 vite.svg
+│   │   └── 📄 favicon.ico
+│   │
+│   └── 📁 src/
+│       ├── 📄 App.jsx
+│       ├── 📄 main.jsx
+│       │
+│       ├── 📁 api/
+│       │   ├── 📄 axios.js
+│       │   ├── 📄 auth.api.js
+│       │   ├── 📄 product.api.js
+│       │   ├── 📄 customer.api.js
+│       │   ├── 📄 supplier.api.js
+│       │   ├── 📄 invoice.api.js
+│       │   ├── 📄 purchase.api.js
+│       │   ├── 📄 expense.api.js
+│       │   ├── 📄 revenue.api.js
+│       │   ├── 📄 employee.api.js
+│       │   ├── 📄 report.api.js
+│       │   ├── 📄 dashboard.api.js
+│       │   └── 📄 setting.api.js
+│       │
+│       ├── 📁 assets/
+│       │   ├── 📁 images/
+│       │   │   ├── 📄 logo.svg
+│       │   │   └── 📄 no-image.png
+│       │   ├── 📁 fonts/
+│       │   └── 📁 icons/
+│       │
+│       ├── 📁 components/
+│       │   ├── 📁 ui/
+│       │   │   ├── 📄 Button.jsx
+│       │   │   ├── 📄 Card.jsx
+│       │   │   ├── 📄 Modal.jsx
+│       │   │   ├── 📄 Input.jsx
+│       │   │   ├── 📄 Select.jsx
+│       │   │   ├── 📄 Table.jsx
+│       │   │   ├── 📄 Pagination.jsx
+│       │   │   ├── 📄 Spinner.jsx
+│       │   │   ├── 📄 Toast.jsx
+│       │   │   ├── 📄 Alert.jsx
+│       │   │   ├── 📄 Badge.jsx
+│       │   │   ├── 📄 Tabs.jsx
+│       │   │   ├── 📄 Breadcrumb.jsx
+│       │   │   ├── 📄 Tooltip.jsx
+│       │   │   ├── 📄 Dropdown.jsx
+│       │   │   ├── 📄 Skeleton.jsx
+│       │   │   ├── 📄 DatePicker.jsx
+│       │   │   ├── 📄 FileUpload.jsx
+│       │   │   ├── 📄 SearchBar.jsx
+│       │   │   └── 📄 ConfirmDialog.jsx
+│       │   │
+│       │   ├── 📁 forms/
+│       │   │   ├── 📄 ProductForm.jsx
+│       │   │   ├── 📄 CustomerForm.jsx
+│       │   │   ├── 📄 SupplierForm.jsx
+│       │   │   ├── 📄 InvoiceForm.jsx
+│       │   │   ├── 📄 PurchaseForm.jsx
+│       │   │   ├── 📄 ExpenseForm.jsx
+│       │   │   ├── 📄 EmployeeForm.jsx
+│       │   │   ├── 📄 CategoryForm.jsx
+│       │   │   ├── 📄 PaymentForm.jsx
+│       │   │   ├── 📄 UserForm.jsx
+│       │   │   ├── 📄 RoleForm.jsx
+│       │   │   ├── 📄 SettingsForm.jsx
+│       │   │   └── 📄 ProfileForm.jsx
+│       │   │
+│       │   ├── 📁 layout/
+│       │   │   ├── 📄 MainLayout.jsx
+│       │   │   ├── 📄 AuthLayout.jsx
+│       │   │   ├── 📄 Sidebar.jsx
+│       │   │   ├── 📄 TopNav.jsx
+│       │   │   ├── 📄 Footer.jsx
+│       │   │   ├── 📄 Header.jsx
+│       │   │   └── 📄 MobileNav.jsx
+│       │   │
+│       │   ├── 📁 tables/
+│       │   │   ├── 📄 ProductsTable.jsx
+│       │   │   ├── 📄 CustomersTable.jsx
+│       │   │   ├── 📄 SuppliersTable.jsx
+│       │   │   ├── 📄 InvoicesTable.jsx
+│       │   │   ├── 📄 PurchasesTable.jsx
+│       │   │   ├── 📄 EmployeesTable.jsx
+│       │   │   ├── 📄 ExpensesTable.jsx
+│       │   │   ├── 📄 TransactionsTable.jsx
+│       │   │   ├── 📄 StockMovementsTable.jsx
+│       │   │   └── 📄 ActivityLogsTable.jsx
+│       │   │
+│       │   ├── 📁 charts/
+│       │   │   ├── 📄 RevenueChart.jsx
+│       │   │   ├── 📄 SalesBarChart.jsx
+│       │   │   ├── 📄 PieChart.jsx
+│       │   │   ├── 📄 StockLevelChart.jsx
+│       │   │   ├── 📄 ProfitChart.jsx
+│       │   │   └── 📄 DashboardStats.jsx
+│       │   │
+│       │   └── 📁 common/
+│       │       ├── 📄 PrivateRoute.jsx
+│       │       ├── 📄 ErrorBoundary.jsx
+│       │       ├── 📄 PrintComponent.jsx
+│       │       ├── 📄 ExportButton.jsx
+│       │       ├── 📄 ThemeToggle.jsx
+│       │       └── 📄 LanguageSwitcher.jsx
+│       │
+│       ├── 📁 pages/
+│       │   ├── 📁 auth/
+│       │   │   ├── 📄 Login.jsx
+│       │   │   ├── 📄 Register.jsx
+│       │   │   ├── 📄 ForgotPassword.jsx
+│       │   │   ├── 📄 ResetPassword.jsx
+│       │   │   └── 📄 VerifyEmail.jsx
+│       │   │
+│       │   ├── 📁 dashboard/
+│       │   │   ├── 📄 Dashboard.jsx
+│       │   │   ├── 📄 AdminDashboard.jsx
+│       │   │   └── 📄 ManagerDashboard.jsx
+│       │   │
+│       │   ├── 📁 inventory/
+│       │   │   ├── 📄 Products.jsx
+│       │   │   ├── 📄 ProductDetails.jsx
+│       │   │   ├── 📄 Categories.jsx
+│       │   │   ├── 📄 StockMovements.jsx
+│       │   │   ├── 📄 LowStockAlert.jsx
+│       │   │   └── 📄 BarcodeScanner.jsx
+│       │   │
+│       │   ├── 📁 suppliers/
+│       │   │   ├── 📄 Suppliers.jsx
+│       │   │   ├── 📄 SupplierDetails.jsx
+│       │   │   └── 📄 SupplierPayments.jsx
+│       │   │
+│       │   ├── 📁 customers/
+│       │   │   ├── 📄 Customers.jsx
+│       │   │   ├── 📄 CustomerDetails.jsx
+│       │   │   ├── 📄 CustomerDebts.jsx
+│       │   │   └── 📄 CustomerTransactions.jsx
+│       │   │
+│       │   ├── 📁 sales/
+│       │   │   ├── 📄 POS.jsx
+│       │   │   ├── 📄 Invoices.jsx
+│       │   │   ├── 📄 InvoiceDetails.jsx
+│       │   │   ├── 📄 CreateInvoice.jsx
+│       │   │   ├── 📄 Returns.jsx
+│       │   │   └── 📄 Payments.jsx
+│       │   │
+│       │   ├── 📁 purchases/
+│       │   │   ├── 📄 Purchases.jsx
+│       │   │   ├── 📄 PurchaseDetails.jsx
+│       │   │   ├── 📄 CreatePurchase.jsx
+│       │   │   └── 📄 SupplierPayments.jsx
+│       │   │
+│       │   ├── 📁 accounting/
+│       │   │   ├── 📄 Accounting.jsx
+│       │   │   ├── 📄 GeneralLedger.jsx
+│       │   │   ├── 📄 JournalEntries.jsx
+│       │   │   ├── 📄 Expenses.jsx
+│       │   │   ├── 📄 Revenues.jsx
+│       │   │   ├── 📄 Cashbox.jsx
+│       │   │   ├── 📄 BankAccounts.jsx
+│       │   │   ├── 📄 TrialBalance.jsx
+│       │   │   └── 📄 FinancialStatements.jsx
+│       │   │
+│       │   ├── 📁 reports/
+│       │   │   ├── 📄 Reports.jsx
+│       │   │   ├── 📄 SalesReport.jsx
+│       │   │   ├── 📄 ProfitReport.jsx
+│       │   │   ├── 📄 InventoryReport.jsx
+│       │   │   ├── 📄 CustomerReport.jsx
+│       │   │   ├── 📄 SupplierReport.jsx
+│       │   │   ├── 📄 TaxReport.jsx
+│       │   │   ├── 📄 CashflowReport.jsx
+│       │   │   └── 📄 YearlyReport.jsx
+│       │   │
+│       │   ├── 📁 employees/
+│       │   │   ├── 📄 Employees.jsx
+│       │   │   ├── 📄 EmployeeDetails.jsx
+│       │   │   ├── 📄 Attendance.jsx
+│       │   │   ├── 📄 Salaries.jsx
+│       │   │   ├── 📄 Payroll.jsx
+│       │   │   ├── 📄 LeaveRequests.jsx
+│       │   │   └── 📄 Performance.jsx
+│       │   │
+│       │   ├── 📁 settings/
+│       │   │   ├── 📄 Settings.jsx
+│       │   │   ├── 📄 GeneralSettings.jsx
+│       │   │   ├── 📄 CompanyInfo.jsx
+│       │   │   ├── 📄 TaxSettings.jsx
+│       │   │   ├── 📄 CurrencySettings.jsx
+│       │   │   ├── 📄 InvoiceSettings.jsx
+│       │   │   ├── 📄 NotificationSettings.jsx
+│       │   │   ├── 📄 BackupSettings.jsx
+│       │   │   ├── 📄 RolePermissions.jsx
+│       │   │   └── 📄 SystemLogs.jsx
+│       │   │
+│       │   └── 📁 profile/
+│       │       ├── 📄 Profile.jsx
+│       │       ├── 📄 ChangePassword.jsx
+│       │       └── 📄 Preferences.jsx
+│       │
+│       ├── 📁 routes/
+│       │   ├── 📄 AppRoutes.jsx
+│       │   ├── 📄 PrivateRoute.jsx
+│       │   └── 📄 PublicRoute.jsx
+│       │
+│       ├── 📁 store/
+│       │   ├── 📄 auth.store.js
+│       │   ├── 📄 theme.store.js
+│       │   ├── 📄 product.store.js
+│       │   ├── 📄 cart.store.js
+│       │   ├── 📄 invoice.store.js
+│       │   ├── 📄 notification.store.js
+│       │   └── 📄 setting.store.js
+│       │
+│       ├── 📁 hooks/
+│       │   ├── 📄 useAuth.js
+│       │   ├── 📄 useAxios.js
+│       │   ├── 📄 useDebounce.js
+│       │   ├── 📄 useLocalStorage.js
+│       │   ├── 📄 usePermissions.js
+│       │   ├── 📄 usePrint.js
+│       │   ├── 📄 useExport.js
+│       │   ├── 📄 useWebSocket.js
+│       │   └── 📄 useNotification.js
+│       │
+│       ├── 📁 utils/
+│       │   ├── 📄 formatters.js
+│       │   ├── 📄 validators.js
+│       │   ├── 📄 constants.js
+│       │   ├── 📄 helpers.js
+│       │   ├── 📄 exportHelpers.js
+│       │   ├── 📄 encryption.js
+│       │   └── 📄 errorHandler.js
+│       │
+│       └── 📁 styles/
+│           ├── 📄 globals.css
+│           ├── 📄 dark.css
+│           ├── 📄 rtl.css
+│           └── 📄 print.css
+│
+├── 📁 server/
+│   ├── 📄 .env
+│   ├── 📄 .env.example
+│   ├── 📄 .gitignore
+│   ├── 📄 package.json
+│   ├── 📄 server.js
+│   ├── 📄 ecosystem.config.js
+│   │
+│   ├── 📁 prisma/
+│   │   ├── 📄 schema.prisma
+│   │   ├── 📄 seed.js
+│   │   └── 📁 migrations/
+│   │       └── 📁 20240101000000_init/
+│   │           └── 📄 migration.sql
+│   │
+│   └── 📁 src/
+│       ├── 📄 app.js
+│       │
+│       ├── 📁 config/
+│       │   ├── 📄 database.js
+│       │   ├── 📄 jwt.js
+│       │   ├── 📄 redis.js
+│       │   ├── 📄 email.js
+│       │   ├── 📄 logger.js
+│       │   └── 📄 constants.js
+│       │
+│       ├── 📁 controllers/
+│       │   ├── 📄 auth.controller.js
+│       │   ├── 📄 user.controller.js
+│       │   ├── 📄 product.controller.js
+│       │   ├── 📄 category.controller.js
+│       │   ├── 📄 customer.controller.js
+│       │   ├── 📄 supplier.controller.js
+│       │   ├── 📄 invoice.controller.js
+│       │   ├── 📄 purchase.controller.js
+│       │   ├── 📄 expense.controller.js
+│       │   ├── 📄 revenue.controller.js
+│       │   ├── 📄 employee.controller.js
+│       │   ├── 📄 attendance.controller.js
+│       │   ├── 📄 salary.controller.js
+│       │   ├── 📄 payment.controller.js
+│       │   ├── 📄 cashbox.controller.js
+│       │   ├── 📄 report.controller.js
+│       │   ├── 📄 dashboard.controller.js
+│       │   ├── 📄 setting.controller.js
+│       │   ├── 📄 activityLog.controller.js
+│       │   └── 📄 upload.controller.js
+│       │
+│       ├── 📁 middlewares/
+│       │   ├── 📄 auth.js
+│       │   ├── 📄 errorHandler.js
+│       │   ├── 📄 validation.js
+│       │   ├── 📄 upload.js
+│       │   ├── 📄 rateLimiter.js
+│       │   ├── 📄 logger.js
+│       │   ├── 📄 cors.js
+│       │   ├── 📄 cache.js
+│       │   └── 📄 audit.js
+│       │
+│       ├── 📁 routes/
+│       │   ├── 📄 auth.routes.js
+│       │   ├── 📄 user.routes.js
+│       │   ├── 📄 product.routes.js
+│       │   ├── 📄 category.routes.js
+│       │   ├── 📄 customer.routes.js
+│       │   ├── 📄 supplier.routes.js
+│       │   ├── 📄 invoice.routes.js
+│       │   ├── 📄 purchase.routes.js
+│       │   ├── 📄 expense.routes.js
+│       │   ├── 📄 revenue.routes.js
+│       │   ├── 📄 employee.routes.js
+│       │   ├── 📄 attendance.routes.js
+│       │   ├── 📄 salary.routes.js
+│       │   ├── 📄 payment.routes.js
+│       │   ├── 📄 cashbox.routes.js
+│       │   ├── 📄 report.routes.js
+│       │   ├── 📄 dashboard.routes.js
+│       │   ├── 📄 setting.routes.js
+│       │   ├── 📄 activityLog.routes.js
+│       │   └── 📄 upload.routes.js
+│       │
+│       ├── 📁 services/
+│       │   ├── 📄 auth.service.js
+│       │   ├── 📄 email.service.js
+│       │   ├── 📄 pdf.service.js
+│       │   ├── 📄 excel.service.js
+│       │   ├── 📄 stock.service.js
+│       │   ├── 📄 accounting.service.js
+│       │   ├── 📄 report.service.js
+│       │   ├── 📄 notification.service.js
+│       │   ├── 📄 backup.service.js
+│       │   └── 📄 websocket.service.js
+│       │
+│       ├── 📁 repositories/
+│       │   ├── 📄 user.repository.js
+│       │   ├── 📄 product.repository.js
+│       │   ├── 📄 customer.repository.js
+│       │   ├── 📄 invoice.repository.js
+│       │   ├── 📄 purchase.repository.js
+│       │   └── 📄 transaction.repository.js
+│       │
+│       ├── 📁 validations/
+│       │   ├── 📄 auth.validation.js
+│       │   ├── 📄 product.validation.js
+│       │   ├── 📄 customer.validation.js
+│       │   ├── 📄 invoice.validation.js
+│       │   ├── 📄 purchase.validation.js
+│       │   ├── 📄 employee.validation.js
+│       │   └── 📄 report.validation.js
+│       │
+│       ├── 📁 utils/
+│       │   ├── 📄 helpers.js
+│       │   ├── 📄 formatters.js
+│       │   ├── 📄 validators.js
+│       │   ├── 📄 encryption.js
+│       │   ├── 📄 tokenGenerator.js
+│       │   ├── 📄 dateHelpers.js
+│       │   ├── 📄 mathHelpers.js
+│       │   └── 📄 errorHelpers.js
+│       │
+│       ├── 📁 jobs/
+│       │   ├── 📄 invoiceReminder.js
+│       │   ├── 📄 backupJob.js
+│       │   ├── 📄 stockAlert.js
+│       │   ├── 📄 reportGenerator.js
+│       │   ├── 📄 emailQueue.js
+│       │   └── 📄 cleanupJob.js
+│       │
+│       ├── 📁 sockets/
+│       │   ├── 📄 websocket.js
+│       │   ├── 📄 events.js
+│       │   ├── 📄 notificationHandler.js
+│       │   └── 📄 posSync.js
+│       │
+│       ├── 📁 modules/
+│       │   ├── 📁 pos/
+│       │   │   ├── 📄 pos.controller.js
+│       │   │   ├── 📄 pos.service.js
+│       │   │   └── 📄 pos.routes.js
+│       │   ├── 📁 accounting/
+│       │   │   ├── 📄 ledger.service.js
+│       │   │   ├── 📄 journal.service.js
+│       │   │   └── 📄 closing.service.js
+│       │   └── 📁 inventory/
+│       │       ├── 📄 stock.service.js
+│       │       ├── 📄 valuation.service.js
+│       │       └── 📄 transfer.service.js
+│       │
+│       └── 📁 uploads/
+│           ├── 📁 avatars/
+│           ├── 📁 products/
+│           ├── 📁 receipts/
+│           ├── 📁 invoices/
+│           └── 📁 temp/
+│
+├── 📁 docker/
+│   ├── 📄 Dockerfile.frontend
+│   ├── 📄 Dockerfile.backend
+│   ├── 📄 nginx.conf
+│   ├── 📁 postgres/
+│   │   ├── 📄 init.sql
+│   │   └── 📄 Dockerfile
+│   └── 📁 redis/
+│       └── 📄 redis.conf
+│
+├── 📁 docs/
+│   ├── 📁 api/
+│   │   ├── 📄 auth.md
+│   │   ├── 📄 products.md
+│   │   ├── 📄 sales.md
+│   │   └── 📄 accounting.md
+│   ├── 📁 database/
+│   │   ├── 📄 schema.md
+│   │   └── 📄 migrations.md
+│   ├── 📁 deployment/
+│   │   ├── 📄 production.md
+│   │   ├── 📄 staging.md
+│   │   └── 📄 ci-cd.md
+│   ├── 📁 user-guide/
+│   │   ├── 📄 getting-started.md
+│   │   ├── 📄 inventory.md
+│   │   └── 📄 accounting.md
+│   └── 📁 developer/
+│       ├── 📄 setup.md
+│       ├── 📄 architecture.md
+│       └── 📄 contributing.md
+│
+├── 📁 scripts/
+│   ├── 📄 backup.sh
+│   ├── 📄 deploy.sh
+│   ├── 📄 seed.sh
+│   ├── 📄 migrate.sh
+│   └── 📄 healthcheck.sh
+│
+├── 📁 tests/
+│   ├── 📁 unit/
+│   │   ├── 📁 controllers/
+│   │   ├── 📁 services/
+│   │   └── 📁 utils/
+│   ├── 📁 integration/
+│   │   ├── 📁 api/
+│   │   └── 📁 database/
+│   ├── 📁 e2e/
+│   │   ├── 📄 auth.spec.js
+│   │   └── 📄 sales.spec.js
+│   └── 📁 fixtures/
+│       ├── 📄 users.json
+│       ├── 📄 products.json
+│       └── 📄 invoices.json
+│
+├── 📁 .github/
+│   ├── 📁 workflows/
+│   │   ├── 📄 ci.yml
+│   │   ├── 📄 cd.yml
+│   │   └── 📄 tests.yml
+│   └── 📄 PULL_REQUEST_TEMPLATE.md
+│
+├── 📄 .eslintrc.js
+├── 📄 .prettierrc
+├── 📄 .editorconfig
+└── 📄 CONTRIBUTING.md
